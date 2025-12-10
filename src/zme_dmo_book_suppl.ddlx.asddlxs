@@ -1,0 +1,7 @@
+@Metadata.layer: #CUSTOMER
+annotate view zc_dmo_book_suppl with {
+  @UI.lineItem: [{ position: 10, label: 'Supplement ID' }] BookingSupplementId;
+  @UI.lineItem: [{ position: 20, label: 'Supplement' }] SupplementId;
+  @UI.lineItem: [{ position: 30, label: 'Price' }] Price;
+  @UI.lineItem: [{ position: 40, label: 'Currency' }] CurrencyCode;
+}

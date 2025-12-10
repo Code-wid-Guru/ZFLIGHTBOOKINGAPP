@@ -1,0 +1,13 @@
+@Metadata.layer: #CUSTOMER
+annotate view ZC_dmo_bookings with {
+  @UI.facet: [
+    { id: 'Connection',  purpose: #STANDARD, type: #IDENTIFICATION_REFERENCE, label: 'Connection', targetElement: '_connection' },
+    { id: 'Supplements', purpose: #STANDARD, type: #COLLECTION, label: 'Supplements', targetElement: '_BOOKSUPPL' }
+  ]
+
+  @UI.lineItem: [{ position: 10, label: 'Booking ID' }] BookingId    ;
+  @UI.lineItem: [{ position: 20, label: 'Booking Date' }] BookingDate  ;
+  @UI.lineItem: [{ position: 30, label: 'Flight Date' }] FlightDate   ;
+  @UI.lineItem: [{ position: 40, label: 'Flight Price' }] FlightPrice  ;
+  @UI.lineItem: [{ position: 50, label: 'Currency' }] CurrencyCode ;
+}
