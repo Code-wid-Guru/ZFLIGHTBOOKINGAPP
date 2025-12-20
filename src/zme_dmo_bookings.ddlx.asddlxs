@@ -1,7 +1,7 @@
 @Metadata.layer: #CUSTOMER
-annotate view ZC_dmo_bookings with {
+annotate entity ZC_dmo_bookings with {
   @UI.facet: [
-    { id: 'Connection',  purpose: #STANDARD, type: #IDENTIFICATION_REFERENCE, label: 'Connection', targetElement: '_connection' },
+//    { id: 'Connection',  purpose: #STANDARD, type: #IDENTIFICATION_REFERENCE, label: 'Connection', targetElement: '_connection' },
     { id: 'Supplements', purpose: #STANDARD, type: #COLLECTION, label: 'Supplements', targetElement: '_BOOKSUPPL' }
   ]
 

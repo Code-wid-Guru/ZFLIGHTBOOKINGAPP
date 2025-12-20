@@ -1,0 +1,19 @@
+@Metadata.layer: #CUSTOMER
+annotate entity ZC_dmo_travel
+    with 
+{
+    @UI.facet: [
+    { id: 'Bookings', purpose: #STANDARD, type: #COLLECTION, label: 'Bookings', targetElement: '_BOOKING' },
+    { id: 'Agency',   purpose: #STANDARD, type: #IDENTIFICATION_REFERENCE, label: 'Agency', targetElement: '_agency' },
+    { id: 'Customer', purpose: #STANDARD, type: #IDENTIFICATION_REFERENCE, label: 'Customer', targetElement: '_customer' }
+  ]
+
+  @UI.lineItem: [{ position: 10, label: 'Travel ID' }]  TravelId;
+  @UI.lineItem: [{ position: 20, label: 'Description' }] Description;  
+  @UI.lineItem: [{ position: 30, label: 'Status' }]  Status;        
+  @UI.lineItem: [{ position: 40, label: 'Begin Date' }]   BeginDate;
+  @UI.lineItem: [{ position: 50, label: 'End Date' }] EndDate;
+  @UI.lineItem: [{ position: 60, label: 'Total Price' }] TotalPrice;
+  @UI.lineItem: [{ position: 70, label: 'Currency' }] CurrencyCode;
+    
+}

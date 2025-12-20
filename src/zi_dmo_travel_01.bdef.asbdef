@@ -1,0 +1,31 @@
+managed implementation in class zbp_i_dmo_travel_01 unique;
+strict ( 2 );
+
+define behavior for ZI_dmo_travel_01 //alias <alias_name>
+persistent table ztb_dmo_travel
+lock master
+authorization master ( instance )
+etag master Lastchangedat
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) TravelId;
+
+  mapping for ztb_dmo_travel {
+    AgencyId = agency_id;
+    BeginDate = begin_date;
+    BookingFee = booking_fee;
+    Createdat = createdat;
+    Createdby = createdby;
+    CurrencyCode = currency_code;
+    CustomerId =customer_id;
+    Description = description;
+    EndDate = end_date;
+    Lastchangedat = lastchangedat;
+    Lastchangedby = lastchangedby;
+    Status = status;
+    TotalPrice = total_price;
+    TravelId = travel_id;
+  }
+}

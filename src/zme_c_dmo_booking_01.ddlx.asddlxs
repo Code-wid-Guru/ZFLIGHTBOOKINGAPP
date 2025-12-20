@@ -1,0 +1,25 @@
+@Metadata.layer: #CORE
+annotate entity ZC_DMO_BOOKING_01
+    with 
+{
+    @UI.lineItem: [{ qualifier: 'Facet2', position: 10 }]
+    BookingId;
+    @UI.lineItem: [{ qualifier: 'Facet2', position: 20 }]
+    BookingDate;
+    @UI.lineItem: [{ qualifier: 'Facet2', position: 30 }]
+    CarrierId;
+    @UI.lineItem: [{ qualifier: 'Facet2', position: 40 }]
+    ConnectionId;
+    @UI.lineItem: [{ qualifier: 'Facet2', position: 50 }]
+    CurrencyCode;
+    @UI.lineItem: [{ qualifier: 'Facet2', position: 60 }]
+    CustomerId;
+    @UI.lineItem: [{ qualifier: 'Facet2', position: 70 }]
+    FlightDate;
+    @UI.lineItem: [{ qualifier: 'Facet2', position: 80 }]
+    FlightPrice;
+    @UI.lineItem: [{ qualifier: 'Facet2', position: 90 }]
+    TravelId;
+    
+    
+}

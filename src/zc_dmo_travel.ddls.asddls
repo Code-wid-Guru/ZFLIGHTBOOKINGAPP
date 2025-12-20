@@ -1,7 +1,7 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: '.'
 @Metadata.allowExtensions: true
-@Metadata.ignorePropagatedAnnotations: true
+@Metadata.ignorePropagatedAnnotations: false
 define root view entity ZC_dmo_travel
   provider contract transactional_query
   as projection on ZI_DMO_Travel

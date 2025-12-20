@@ -1,0 +1,81 @@
+managed implementation in class zbp_i_dmo_travel unique;
+strict ( 2 );
+
+define behavior for ZI_DMO_Travel //alias <alias_name>
+persistent table ztb_dmo_travel
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) TravelId;
+  association _BOOKING { create; }
+
+
+  mapping for ztb_dmo_travel {
+    AgencyId = agency_id;
+    BeginDate = begin_date;
+    BookingFee = booking_fee;
+    Createdat = createdat;
+    Createdby = createdby;
+    CurrencyCode = currency_code;
+    CustomerId = customer_id;
+    Description = description;
+    EndDate = end_date;
+    Lastchangedat = lastchangedat;
+    Lastchangedby =lastchangedby;
+    Status = status;
+    TotalPrice = total_price;
+    TravelId =  travel_id;
+  }
+}
+
+define behavior for ZI_DMO_booking //alias <alias_name>
+persistent table ztb_dmo_booking
+lock dependent by _TRAVEL
+authorization dependent by _TRAVEL
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) TravelId, BookingId;
+  association _TRAVEL;
+  association _BOOKSUPPL { create; }
+
+  mapping for ztb_dmo_booking {
+    BookingDate = booking_date;
+    BookingId = booking_id;
+    CarrierId = carrier_id;
+    ConnectionId = connection_id;
+    CurrencyCode = currency_code;
+    CustomerId = customer_id;
+    FlightDate = flight_date;
+    FlightPrice = flight_price;
+    TravelId = travel_id;
+  }
+
+}
+
+define behavior for ZI_DMO_book_suppl //alias <alias_name>
+persistent table ztb_dmo_suppl
+lock dependent by _travel
+authorization dependent by _travel
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) TravelId, BookingId, BookingSupplementId;
+  association _travel;
+  association _booking;
+
+  mapping for ztb_dmo_suppl {
+    BookingId = booking_id;
+    BookingSupplementId = booking_supplement_id;
+    CurrencyCode = currency_code;
+    Price = price;
+    SupplementId = supplement_id;
+    TravelId = travel_id;
+  }
+}

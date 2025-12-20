@@ -1,0 +1,5 @@
+@EndUserText.label: '.'
+define service ZSD_DMO_TRAVEL_01 {
+  expose ZC_dmo_travel_01;
+  expose ZC_DMO_BOOKING_01;
+}

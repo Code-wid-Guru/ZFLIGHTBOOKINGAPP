@@ -1,6 +1,6 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: '.'
-@Metadata.ignorePropagatedAnnotations: true
+@Metadata.ignorePropagatedAnnotations: false
 @Metadata.allowExtensions: true
 define view entity zc_dmo_book_suppl
   as projection on ZI_DMO_book_suppl
