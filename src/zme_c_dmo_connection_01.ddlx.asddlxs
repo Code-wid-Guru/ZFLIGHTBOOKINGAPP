@@ -20,11 +20,9 @@ annotate entity ZC_DMO_CONNECTION_01
     @UI.identification: [{ qualifier: 'ConnecID' , position: 60}]
     @UI.lineItem: [{ qualifier: 'Connec', position: 60 }]
     ArrivalTime;
-    @UI.identification: [{ qualifier: 'ConnecID' , position: 70}]
+    @UI.identification: [{ qualifier: 'ConnecID', label: 'Distance' , position: 70}]
     @UI.lineItem: [{ qualifier: 'Connec', position: 70 }]
     Distance;
-    @UI.identification: [{ qualifier: 'ConnecID' , position: 80}]
-    @UI.lineItem: [{ qualifier: 'Connec', position: 80 }]
-    DistanceUnit;
+
     
 }

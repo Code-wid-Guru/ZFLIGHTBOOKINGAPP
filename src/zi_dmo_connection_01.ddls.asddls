@@ -16,8 +16,8 @@ association to /dmo/airport as _airportto_01 on $projection.AirportToId = _airpo
     _airportto_01.name as ToAirport,
     departure_time as DepartureTime,
     arrival_time as ArrivalTime,
-  
-    distance as Distance,
+    @Semantics.quantity.unitOfMeasure: 'DistanceUnit'
+    cast(distance as abap.dec(15,2)) as Distance,
     distance_unit as DistanceUnit,
     _BOOKING_01
 }

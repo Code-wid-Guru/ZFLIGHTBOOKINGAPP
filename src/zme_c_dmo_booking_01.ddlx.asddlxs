@@ -1,5 +1,5 @@
 @Metadata.layer: #CORE
-@UI.headerInfo.title: { value: 'BookingId' }
+@UI.headerInfo.title: { value: 'Connec_Tile' }
 annotate entity ZC_DMO_BOOKING_01
     with 
 {
@@ -40,7 +40,7 @@ annotate entity ZC_DMO_BOOKING_01
     @UI.lineItem: [{ qualifier: 'Facet2', position: 20 }]
     BookingDate;
     @UI.lineItem: [{ qualifier: 'Facet2', position: 30 }]
-    CarrierId;
+    Carrier;
     @UI.lineItem: [{ qualifier: 'Facet2', position: 40 }]
     ConnectionId;
     @UI.lineItem: [{ qualifier: 'Facet2', position: 50 }]
