@@ -8,7 +8,7 @@ as projection on ZI_DMO_BOOKING_01
     key BookingId,
     BookingDate,
     CustomerId,
-    Passanger,
+    Passenger,
     Connec_Tile,
     CarrierId,
     Carrier,

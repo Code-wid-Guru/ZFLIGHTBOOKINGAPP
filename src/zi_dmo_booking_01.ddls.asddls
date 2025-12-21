@@ -12,20 +12,20 @@ association to /dmo/customer as _customer_01 on $projection.CustomerId = _custom
     key booking_id as BookingId,
     booking_date as BookingDate,
     customer_id as CustomerId,
-    concat_with_space(_customer_01.first_name, _customer_01.last_name, 1) as Passanger,
+    concat_with_space(_customer_01.first_name, _customer_01.last_name, 1) as Passenger,
     concat_with_space( 
                         concat(
                                 concat(
                                         concat(
-                                                substring(booking_date, length(booking_date)-1, 2 ),
+                                                substring(flight_date, length(flight_date)-1, 2 ),
                                                  '-'
                                               ), 
                                         concat(
-                                                substring(booking_date, length(booking_date)-3, 2 )
+                                                substring(flight_date, length(flight_date)-3, 2 )
                                                 , '-'
                                               )
                                       ), 
-                                      substring(booking_date, length(booking_date)-7, 4 )
+                                      substring(flight_date, length(flight_date)-7, 4 )
                                )
                      , concat_with_space(_customer_01.first_name, _customer_01.last_name, 1), 5
                      ) as Connec_Tile,

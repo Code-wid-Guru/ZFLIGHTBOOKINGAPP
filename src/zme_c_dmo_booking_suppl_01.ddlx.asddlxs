@@ -2,9 +2,9 @@
 annotate entity ZC_DMO_BOOKING_SUPPL_01
     with 
 {
-    @UI.lineItem: [{ qualifier: 'BookSuppl', position: 10 }]
+    @UI.lineItem: [{ qualifier: 'BookSuppl', label: 'Supplement', position: 10 }]
     Supplement;
-    @UI.lineItem: [{ qualifier: 'BookSuppl', position: 20 }]
+    @UI.lineItem: [{ qualifier: 'BookSuppl', label: 'Category', position: 20 }]
     Category;
     @UI.lineItem: [{ qualifier: 'BookSuppl', position: 30 }]
     Price;

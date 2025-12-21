@@ -35,19 +35,19 @@ annotate entity ZC_DMO_BOOKING_01
     ]
 
 
+//    @UI.lineItem: [{ qualifier: 'Facet2', position: 10 }]
+//    BookingId;
+//    @UI.lineItem: [{ qualifier: 'Facet2', position: 20 }]
+//    BookingDate;
     @UI.lineItem: [{ qualifier: 'Facet2', position: 10 }]
-    BookingId;
-    @UI.lineItem: [{ qualifier: 'Facet2', position: 20 }]
-    BookingDate;
-    @UI.lineItem: [{ qualifier: 'Facet2', position: 30 }]
-    Carrier;
-    @UI.lineItem: [{ qualifier: 'Facet2', position: 40 }]
-    ConnectionId;
-    @UI.lineItem: [{ qualifier: 'Facet2', position: 50 }]
-    Passanger;
-    @UI.lineItem: [{ qualifier: 'Facet2', position: 60 }]
     FlightDate;
-    @UI.lineItem: [{ qualifier: 'Facet2', position: 70 }]
+    @UI.lineItem: [{ qualifier: 'Facet2', position: 20 }]
+    Carrier;
+    @UI.lineItem: [{ qualifier: 'Facet2', position: 30 }]
+    ConnectionId;
+    @UI.lineItem: [{ qualifier: 'Facet2', position: 40 }]
+    Passenger;
+    @UI.lineItem: [{ qualifier: 'Facet2', position: 50 }]
     FlightPrice;
     
     

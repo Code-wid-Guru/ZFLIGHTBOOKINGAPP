@@ -3,6 +3,7 @@
 {
 "FROM":
 [
+"/DMO/TRVL_STAT_T",
 "ZTB_DMO_TRAVEL"
 ],
 "ASSOCIATED":
