@@ -53,7 +53,7 @@ annotate entity ZC_dmo_travel_01
   @UI.fieldGroup: [{ qualifier: 'Headeritem' , position: 2}]
   Status;        
   @UI.identification: [{ position: 30 }]
-  @UI.lineItem: [{ position: 40, label: 'Begin Date' }]   
+  @UI.lineItem: [{ position: 40, label: 'Start Date' }]   
   @UI.fieldGroup: [{ qualifier: 'Headeritem', label: 'Start Date' , position: 3}]
   BeginDate;
   @UI.identification: [{ position: 40 }]

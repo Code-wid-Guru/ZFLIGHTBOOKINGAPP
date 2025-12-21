@@ -14,7 +14,6 @@ ENDCLASS.
 
 CLASS zcl_dmo_dataprovider IMPLEMENTATION.
 
-
   METHOD if_oo_adt_classrun~main.
 *    select * frOM /dmo/travel into table @data(lt_dmo_travel).
 *    if sy-subrc = 0.
@@ -26,6 +25,8 @@ CLASS zcl_dmo_dataprovider IMPLEMENTATION.
     ( select * from /dmo/booking ).
     insert ztb_dmo_suppl from
     ( select * from /dmo/book_suppl ).
+    insert ztb_dmo_connec from
+    ( select * from /dmo/connection ).
     out->write( |Inserted.| ).
   ENDMETHOD.
 ENDCLASS.

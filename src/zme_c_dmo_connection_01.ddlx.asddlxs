@@ -1,0 +1,30 @@
+@Metadata.layer: #CORE
+annotate entity ZC_DMO_CONNECTION_01
+    with 
+{
+    @UI.identification: [{ qualifier: 'ConnecID' , position: 10}]
+    @UI.lineItem: [{ qualifier: 'Connec', position: 10 }]
+    Carrier;
+    @UI.identification: [{ qualifier: 'ConnecID' , position: 20}]
+    @UI.lineItem: [{ qualifier: 'Connec', position: 20 }]
+    ConnectionId;
+    @UI.identification: [{ qualifier: 'ConnecID', label: 'Departure From' , position: 30}]
+    @UI.lineItem: [{ qualifier: 'Connec', label: 'Departure Airport', position: 30 }]
+    FromAirport;
+    @UI.identification: [{ qualifier: 'ConnecID', label: 'Arrival At' , position: 40}]
+    @UI.lineItem: [{ qualifier: 'Connec', label: 'Arrival Airport', position: 40 }]
+    ToAirport;
+    @UI.identification: [{ qualifier: 'ConnecID' , position: 50}]
+    @UI.lineItem: [{ qualifier: 'Connec', position: 50 }]
+    DepartureTime;
+    @UI.identification: [{ qualifier: 'ConnecID' , position: 60}]
+    @UI.lineItem: [{ qualifier: 'Connec', position: 60 }]
+    ArrivalTime;
+    @UI.identification: [{ qualifier: 'ConnecID' , position: 70}]
+    @UI.lineItem: [{ qualifier: 'Connec', position: 70 }]
+    Distance;
+    @UI.identification: [{ qualifier: 'ConnecID' , position: 80}]
+    @UI.lineItem: [{ qualifier: 'Connec', position: 80 }]
+    DistanceUnit;
+    
+}

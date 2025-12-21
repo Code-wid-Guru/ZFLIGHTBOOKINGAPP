@@ -1,7 +1,7 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: '.'
 define root view entity ZI_dmo_travel_01 as select from ztb_dmo_travel
-composition [1..*] of ZI_DMO_BOOKING_01  as _BOOKING_01  
+composition [1..*] of ZI_DMO_BOOKING_01  as _BOOKING_01
 {
     key travel_id as TravelId,
     agency_id as AgencyId,

@@ -1,0 +1,13 @@
+@Metadata.layer: #CORE
+annotate entity ZC_DMO_BOOKING_SUPPL_01
+    with 
+{
+    @UI.lineItem: [{ qualifier: 'BookSuppl', position: 10 }]
+    Supplement;
+    @UI.lineItem: [{ qualifier: 'BookSuppl', position: 20 }]
+    Category;
+    @UI.lineItem: [{ qualifier: 'BookSuppl', position: 30 }]
+    Price;
+
+    
+}

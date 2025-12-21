@@ -8,11 +8,14 @@ as projection on ZI_DMO_BOOKING_01
     key BookingId,
     BookingDate,
     CustomerId,
+    Passanger,
     CarrierId,
     ConnectionId,
     FlightDate,
     FlightPrice,
     CurrencyCode,
     /* Associations */
-    _travel_01 : redirected to parent ZC_dmo_travel_01
+    _travel_01 : redirected to parent ZC_dmo_travel_01,
+    _booking_suppl_01 : redirected to composition child ZC_DMO_BOOKING_SUPPL_01,
+    _connection_01 : redirected to ZC_DMO_CONNECTION_01
 }
