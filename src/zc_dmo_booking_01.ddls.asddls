@@ -15,6 +15,8 @@ as projection on ZI_DMO_BOOKING_01
     ConnectionId,
     FlightDate,
     FlightPrice,
+    SeatsOccupied,
+    SeatsMax,
     CurrencyCode,
     /* Associations */
     _travel_01 : redirected to parent ZC_dmo_travel_01,

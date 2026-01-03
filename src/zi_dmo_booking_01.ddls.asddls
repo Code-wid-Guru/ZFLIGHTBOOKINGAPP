@@ -7,6 +7,9 @@ association [1] to ZI_DMO_Connection_01 as _connection_01 on $projection.Carrier
 association to parent ZI_dmo_travel_01 as _travel_01
     on $projection.TravelId = _travel_01.TravelId
 association to /dmo/customer as _customer_01 on $projection.CustomerId = _customer_01.customer_id
+association to /dmo/flight as _flight_01 on $projection.CarrierId = _flight_01.carrier_id 
+                                         and $projection.ConnectionId = _flight_01.connection_id
+                                         and $projection.FlightDate = _flight_01.flight_date
 {
     key travel_id as TravelId,
     key booking_id as BookingId,
@@ -33,10 +36,13 @@ association to /dmo/customer as _customer_01 on $projection.CustomerId = _custom
     _connection_01.Carrier as Carrier,
     connection_id as ConnectionId,
     flight_date as FlightDate,
+    _flight_01.seats_occupied as SeatsOccupied,
+    _flight_01.seats_max as SeatsMax,
     @Semantics.amount.currencyCode: 'CurrencyCode'
     flight_price as FlightPrice,
     currency_code as CurrencyCode,
     _travel_01, // Make association public
     _booking_suppl_01,
     _connection_01
+    
 }
