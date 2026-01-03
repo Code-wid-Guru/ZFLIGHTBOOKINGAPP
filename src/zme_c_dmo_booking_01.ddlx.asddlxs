@@ -1,8 +1,21 @@
 @Metadata.layer: #CORE
 //@UI.headerInfo.title: { value: 'Connec_Tile' }
+@UI.headerInfo: {
+  typeImageUrl: 'sap-icon://flight',
+//  imageUrl: 'ImageUrl',
+  title: {
+    value: 'Passenger',
+    type: #STANDARD
+  },
+  description: {
+    type: #STANDARD,
+    value: 'FlightDate'
+  }
+ }
 annotate entity ZC_DMO_BOOKING_01
     with 
 {
+   
     @UI.facet: [
 //    // Connection details
 //    { id: 'Connec',
@@ -13,12 +26,19 @@ annotate entity ZC_DMO_BOOKING_01
 //      targetElement: '_connection_01'
 //    },
     
-    {  
-        purpose: #HEADER,
-        label: 'Booking Details',
-        type       : #FIELDGROUP_REFERENCE,
-        targetQualifier: 'Booking_head'
-    },
+//    {  
+//        purpose: #HEADER,
+//        label: ' ',
+//        type       : #FIELDGROUP_REFERENCE,
+//        targetQualifier: 'Booking_head'
+//    },
+//    
+//    {  
+//        purpose: #HEADER,
+//        label: 'Passanger',
+//        type       : #FIELDGROUP_REFERENCE,
+//        targetQualifier: 'pass'
+//    },
     
      { id: 'ConnecID',
       type: #IDENTIFICATION_REFERENCE,
@@ -44,12 +64,14 @@ annotate entity ZC_DMO_BOOKING_01
 //    @UI.lineItem: [{ qualifier: 'Facet2', position: 20 }]
 //    BookingDate;
     @UI.lineItem: [{ qualifier: 'Facet2', position: 10 }]
+    @UI.fieldGroup: [{ qualifier: 'Booking_head', position: 10  }]
     FlightDate;
     @UI.lineItem: [{ qualifier: 'Facet2', position: 20 }]
     Carrier;
     @UI.lineItem: [{ qualifier: 'Facet2', position: 30 }]
     ConnectionId;
     @UI.lineItem: [{ qualifier: 'Facet2', position: 40 }]
+    @UI.fieldGroup: [{ qualifier: 'pass', position: 10  }]
     Passenger;
     @UI.lineItem: [{ qualifier: 'Facet2', position: 50 }]
     FlightPrice;
@@ -57,6 +79,6 @@ annotate entity ZC_DMO_BOOKING_01
     SeatsOccupied;
     @UI.lineItem: [{ qualifier: 'Facet2', position: 70 }]
     SeatsMax;
-    @UI.fieldGroup: [{ qualifier: 'Booking_head'  }]
-    Connec_Tile;
+    //@UI.fieldGroup: [{ qualifier: 'Booking_head', position: 10  }]
+    //Connec_Tile;
 }

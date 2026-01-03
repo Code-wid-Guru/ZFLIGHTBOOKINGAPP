@@ -10,6 +10,7 @@ association to /dmo/customer as _customer_01 on $projection.CustomerId = _custom
 association to /dmo/flight as _flight_01 on $projection.CarrierId = _flight_01.carrier_id 
                                          and $projection.ConnectionId = _flight_01.connection_id
                                          and $projection.FlightDate = _flight_01.flight_date
+                                       
 {
     key travel_id as TravelId,
     key booking_id as BookingId,
