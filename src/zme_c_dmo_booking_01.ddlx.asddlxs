@@ -15,7 +15,7 @@
 annotate entity ZC_DMO_BOOKING_01
     with 
 {
-   
+     
     @UI.facet: [
 //    // Connection details
 //    { id: 'Connec',
@@ -40,7 +40,7 @@ annotate entity ZC_DMO_BOOKING_01
 //        targetQualifier: 'pass'
 //    },
     
-     { id: 'ConnecID',
+    { id: 'ConnecID',
       type: #IDENTIFICATION_REFERENCE,
       label: 'Connection',
       targetQualifier: 'ConnecID',
@@ -63,21 +63,25 @@ annotate entity ZC_DMO_BOOKING_01
 //    BookingId;
 //    @UI.lineItem: [{ qualifier: 'Facet2', position: 20 }]
 //    BookingDate;
-    @UI.lineItem: [{ qualifier: 'Facet2', position: 10 }]
+    @UI.lineItem: [{ qualifier: 'Facet2', label: 'Flight Date', position: 10 }]
     @UI.fieldGroup: [{ qualifier: 'Booking_head', position: 10  }]
     FlightDate;
-    @UI.lineItem: [{ qualifier: 'Facet2', position: 20 }]
+    @UI.lineItem: [{ qualifier: 'Facet2', label: 'Departure', position: 11 }]
+    Departure;
+    @UI.lineItem: [{ qualifier: 'Facet2', label: 'Arrival', position: 12 }]
+    Arrival;
+    @UI.lineItem: [{ qualifier: 'Facet2', label: 'Airline', position: 20 }]
     Carrier;
-    @UI.lineItem: [{ qualifier: 'Facet2', position: 30 }]
+    @UI.lineItem: [{ qualifier: 'Facet2', label: 'Flight Number', position: 30 }]
     ConnectionId;
-    @UI.lineItem: [{ qualifier: 'Facet2', position: 40 }]
+    @UI.lineItem: [{ qualifier: 'Facet2', label: 'Passenger',position: 40 }]
     @UI.fieldGroup: [{ qualifier: 'pass', position: 10  }]
     Passenger;
-    @UI.lineItem: [{ qualifier: 'Facet2', position: 50 }]
+    @UI.lineItem: [{ qualifier: 'Facet2', label: 'Price',position: 50 }]
     FlightPrice;
-    @UI.lineItem: [{ qualifier: 'Facet2', position: 60 }]
+    @UI.lineItem: [{ qualifier: 'Facet2', label: 'Current Occupied',position: 60 }]
     SeatsOccupied;
-    @UI.lineItem: [{ qualifier: 'Facet2', position: 70 }]
+    @UI.lineItem: [{ qualifier: 'Facet2', label: 'Max Seats' ,position: 70 }]
     SeatsMax;
     //@UI.fieldGroup: [{ qualifier: 'Booking_head', position: 10  }]
     //Connec_Tile;

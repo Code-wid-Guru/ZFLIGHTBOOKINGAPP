@@ -18,6 +18,8 @@ as projection on ZI_DMO_BOOKING_01
     SeatsOccupied,
     SeatsMax,
     CurrencyCode,
+    Departure,
+    Arrival,
     /* Associations */
     _travel_01 : redirected to parent ZC_dmo_travel_01,
     _booking_suppl_01 : redirected to composition child ZC_DMO_BOOKING_SUPPL_01,

@@ -35,6 +35,8 @@ association to /dmo/flight as _flight_01 on $projection.CarrierId = _flight_01.c
                      ) as Connec_Tile,
     carrier_id as CarrierId,
     _connection_01.Carrier as Carrier,
+    _connection_01.FromAirport as Departure,
+    _connection_01.ToAirport as Arrival,
     connection_id as ConnectionId,
     flight_date as FlightDate,
     _flight_01.seats_occupied as SeatsOccupied,

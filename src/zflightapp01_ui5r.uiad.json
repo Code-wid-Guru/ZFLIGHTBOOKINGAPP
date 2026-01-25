@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "FlightBookingRAPApp",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Flight Booking App"
+  },
+  "ui5AppDetails": {
+    "appId": "zflightbookingapp"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_5074454E37D250A24D2E2EB404804176391DEA52_TM",
+    "semanticObject": "zflightbookingapp",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_5074454E37D250A24D2E2EB404804176391DEA52_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Flight Booking App",
+        "subtitle": "Rap Based Application"
+      }
+    }
+  ]
+}
