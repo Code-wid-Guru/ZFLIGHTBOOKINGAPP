@@ -22,6 +22,10 @@ association to ZI_DMO_SUPPL_INFO_01 as _suppl_info_01 on $projection.SupplementI
     @Semantics.amount.currencyCode: 'CurrencyCode'
     price as Price,
     currency_code as CurrencyCode,
+    createdby as Createdby,
+    createdat as Createdat,
+    lastchangedby as Lastchangedby,
+    lastchangedat as Lastchangedat,
     _Booking_01, // Make association public
     _travel_01
 }

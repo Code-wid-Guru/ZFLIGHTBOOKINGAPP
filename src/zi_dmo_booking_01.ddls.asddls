@@ -44,6 +44,10 @@ association to /dmo/flight as _flight_01 on $projection.CarrierId = _flight_01.c
     @Semantics.amount.currencyCode: 'CurrencyCode'
     flight_price as FlightPrice,
     currency_code as CurrencyCode,
+    createdby as Createdby,
+    createdat as Createdat,
+    lastchangedby as Lastchangedby,
+    lastchangedat as Lastchangedat,
     _travel_01, // Make association public
     _booking_suppl_01,
     _connection_01

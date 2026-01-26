@@ -11,6 +11,7 @@ etag master Lastchangedat
   update;
   delete;
   field ( readonly ) TravelId;
+  association _BOOKING_01 { create; }
 
   mapping for ztb_dmo_travel {
     AgencyId = agency_id;
@@ -27,5 +28,53 @@ etag master Lastchangedat
     Status = status;
     TotalPrice = total_price;
     TravelId = travel_id;
+  }
+
+}
+
+define behavior for ZI_DMO_BOOKING_01 //alias <alias_name>
+persistent table ztb_dmo_booking
+lock dependent by _travel_01
+authorization dependent by _travel_01
+etag master Lastchangedat
+{
+  update;
+  delete;
+  field ( readonly ) TravelId, BookingId;
+  association _travel_01;
+  association _booking_suppl_01 { create; }
+
+  mapping for ztb_dmo_booking {
+    TravelId = travel_id;
+    BookingId = booking_id;
+    BookingDate = booking_date;
+    CustomerId = customer_id;
+    CarrierId = carrier_id;
+    ConnectionId = connection_id;
+    FlightDate = flight_date;
+    FlightPrice = flight_price;
+    CurrencyCode = currency_code;
+  }
+}
+
+define behavior for ZI_DMO_BOOKING_SUPPL_01 //alias <alias_name>
+persistent table ztb_dmo_suppl
+lock dependent by _travel_01
+authorization dependent by _travel_01
+etag master Lastchangedat
+{
+  update;
+  delete;
+  field ( readonly ) TravelId, BookingId, BookingSupplementId;
+  association _travel_01;
+  association _Booking_01;
+
+  mapping for ztb_dmo_suppl {
+    TravelId = travel_id;
+    BookingId = booking_id;
+    BookingSupplementId = booking_supplement_id;
+    SupplementId = supplement_id;
+    Price = price;
+    CurrencyCode = currency_code;
   }
 }
