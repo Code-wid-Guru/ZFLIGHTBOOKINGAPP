@@ -44,6 +44,7 @@ annotate entity ZC_dmo_travel_01
   @UI.identification: [{ position: 10 }]
   @UI.lineItem: [{ position: 10, label: 'Travel ID' }]  
   @UI.selectionField: [{ position: 10 }]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'zdmo_travel_vh' , element: 'TravelId'}}]
   TravelId;
   @UI.lineItem: [{ position: 20, label: 'Description' }] 
   @UI.identification: [{ position: 20 }]
@@ -51,6 +52,7 @@ annotate entity ZC_dmo_travel_01
   @UI.lineItem: [{ position: 30, label: 'Status' }]  
   @UI.fieldGroup: [{ qualifier: 'Headeritem' , position: 1}]
   @UI.selectionField: [{position: 20}]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'zdmo_travel_vh' , element: 'Status'}}]
   Status;        
   @UI.identification: [{ position: 30 }]
   @UI.lineItem: [{ position: 40, label: 'Start Date' }]   
@@ -64,8 +66,10 @@ annotate entity ZC_dmo_travel_01
   @UI.identification: [{ position: 50 }]
   @UI.selectionField: [{position: 30}]
   @UI.fieldGroup: [{ qualifier: 'Headeritem' , position: 4}]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'zdmo_travel_vh' , element: 'TotalPrice'}}]
   TotalPrice;
   @UI.lineItem: [{ hidden: true }]
   @UI.selectionField: [{position: 40}]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'zdmo_travel_vh' , element: 'CurrencyCode'}}]
   CurrencyCode;
 }

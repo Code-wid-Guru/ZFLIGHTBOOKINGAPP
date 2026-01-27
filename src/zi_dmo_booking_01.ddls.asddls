@@ -41,6 +41,7 @@ association to /dmo/flight as _flight_01 on $projection.CarrierId = _flight_01.c
     flight_date as FlightDate,
     _flight_01.seats_occupied as SeatsOccupied,
     _flight_01.seats_max as SeatsMax,
+    _flight_01.plane_type_id as AircraftModel,
     @Semantics.amount.currencyCode: 'CurrencyCode'
     flight_price as FlightPrice,
     currency_code as CurrencyCode,

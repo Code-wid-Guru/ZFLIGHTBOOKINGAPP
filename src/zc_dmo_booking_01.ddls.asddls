@@ -12,6 +12,7 @@ as projection on ZI_DMO_BOOKING_01
     Connec_Tile,
     CarrierId,
     Carrier,
+    AircraftModel,
     ConnectionId,
     FlightDate,
     FlightPrice,

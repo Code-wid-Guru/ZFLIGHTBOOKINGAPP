@@ -10,6 +10,7 @@ association to /dmo/trvl_stat_t as _status_txt on _status_txt.travel_status = $p
     customer_id as CustomerId,
     begin_date as BeginDate,
     end_date as EndDate,
+    @Semantics.amount.currencyCode: 'CurrencyCode'
     booking_fee as BookingFee,
     @Semantics.amount.currencyCode: 'CurrencyCode'
     total_price as TotalPrice,
