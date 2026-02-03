@@ -1,6 +1,19 @@
 @Metadata.layer: #CORE
 @UI.headerInfo.typeNamePlural: 'Travels'
-@UI.headerInfo.title: { value: 'Description' }
+//@UI.headerInfo.title: { value: 'Description' }
+
+@UI.headerInfo: {
+  typeImageUrl: 'sap-icon://flight',
+//  imageUrl: 'ImageUrl',
+//  title: {
+//    value: 'Description',
+//    type: #STANDARD
+//  },
+  description: {
+    type: #STANDARD,
+    value: 'Status'
+  }
+ }
 
 annotate entity ZC_dmo_travel_01
     with 
@@ -16,7 +29,6 @@ annotate entity ZC_dmo_travel_01
     targetQualifier: 'Headeritem',
     position: 10
    },
-  
   
    //Booking details
    
@@ -52,7 +64,7 @@ annotate entity ZC_dmo_travel_01
   @UI.lineItem: [{ position: 30, label: 'Status' }]  
   @UI.fieldGroup: [{ qualifier: 'Headeritem' , position: 1}]
   @UI.selectionField: [{position: 20}]
-  @Consumption.valueHelpDefinition: [{ entity: { name: 'zdmo_travel_vh' , element: 'Status'}}]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'zdmo_status_vh' , element: 'Status'}}]
   Status;        
   @UI.identification: [{ position: 30 }]
   @UI.lineItem: [{ position: 40, label: 'Start Date' }]   

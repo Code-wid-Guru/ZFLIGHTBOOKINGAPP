@@ -1,0 +1,29 @@
+projection;
+strict ( 2 );
+
+define behavior for ZC_dmo_travel_01 //alias <alias_name>
+{
+  use create;
+  use update;
+  use delete;
+
+  use association _BOOKING_01 { create; }
+}
+
+define behavior for ZC_DMO_BOOKING_01 //alias <alias_name>
+{
+  use update;
+  use delete;
+
+  use association _travel_01;
+  use association _booking_suppl_01 { create; }
+}
+
+define behavior for ZC_DMO_BOOKING_SUPPL_01 //alias <alias_name>
+{
+  use update;
+  use delete;
+
+  use association _travel_01;
+  use association _Booking_01;
+}
